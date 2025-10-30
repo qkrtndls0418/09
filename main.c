@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define SIZE 5 //전처리기 SIZE를 5로 바꿔줌
+ 
 
 int main(int argc, char *argv[])
 {
-  
-  int testScore[5];
-  int i;
-  
-  testScore[0] = 10;
-  testScore[1] = 20;
-  testScore[2] = 30;
-  testScore[3] = 40;
-  testScore[4] = 50;
-  
-  for(i=0;i<5;i++)
-                  printf("grade[%i} = %i\n", i, testScore[i]);
+    int i, average;
+    int sum;
+    int grade[SIZE];
+    
+    sum = 0;
+    for(i=0;i<SIZE;i++)
+    {
+                        printf("학생 성적을 입력하세요:");
+                        scanf("%d", &grade[i]);
+                        sum += grade[i];
+                        }
+     average = sum/SIZE;
+     printf("성적 평균:%d\n", average); 
   
   system("PAUSE");	
   return 0;
